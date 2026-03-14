@@ -2,14 +2,24 @@
 
 
 
+
+
+
+
+import logo from './logo.svg';
+import './App.css';
+import Navbar from './components/navbar';
+import Footer from './components/footer';
 import About from './pages/presentation';
 
 function App() {
   return (
-    <div >
-    
- <About/>
-    </div>
+   <div>
+    <Navbar/>
+    <Footer/>
+     <About/>
+   </div>
+
   );
 }
 
