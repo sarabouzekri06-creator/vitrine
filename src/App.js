@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import './App.css';
+import Hero from './components/Hero';
+
+function App() {
+  return (
+    <div className="App">
+      <Hero />
+     
+    </div>
+=======
 
 
 
@@ -20,6 +33,7 @@ function App() {
      <About/>
    </div>
 
+>>>>>>> main
   );
 }
 
