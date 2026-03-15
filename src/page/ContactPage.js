@@ -2,6 +2,9 @@ import { useForm } from "react-hook-form";
 import { Mail, Phone, User, MessageSquare, Send, MapPin } from "lucide-react";
 import { toast } from "sonner";
 
+
+
+
 const ContactPage = () => {
   const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm();
 
