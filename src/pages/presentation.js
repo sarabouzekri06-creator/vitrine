@@ -24,7 +24,9 @@ const About = () => {
                 public dans le domaine de la formation professionnelle au Maroc.
               </p>
             </div>
-              <img  src="/images/ofppt.jpg"  alt="Siège OFPPT" className='img1'/>          
+              <img  src="/images/ofppt.jpg"  alt="Siège OFPPT" className='img1'/> 
+
+
           </div>
         </div>
       </section>
