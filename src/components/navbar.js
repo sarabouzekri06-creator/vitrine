@@ -1,59 +1,97 @@
 import { useState } from "react";
-
+import "./navbar.css"
+import { Link } from "react-router-dom";
 const Navbar = () => {
 
   const [open, setOpen] = useState(false);
 
-  const menu = () => {
-    setOpen(!open);
-  };
+  const openMenu = () => setOpen(true);
+  const closeMenu = () => setOpen(false);
 
   return (
-    <nav className="navbar navbar-expand-lg " style={{background:"#053F5C"}}>
-      <div className="container-fluid">
+    <>
+      <nav className="navbar navbar-expand-lg " style={{background:"#ffffff"}}>
+        <div className="container">
 
-        {/* LOGO */}
-        <a className="navbar-brand text-white fw-bold d-flex "><h4 style={{color:"#F7AD19"}}>IS</h4><h4>AG</h4>
-            </a>
+          {/* LOGO */}
+           <Link className="navbar-brand text-white fw-bold d-flex" to="/">
+            <h4 style={{color:"#F7AD19"}}>IS</h4>
+            <h4 style={{color:"#053F5C"}}>AG</h4>
+          </Link>
 
-        {/* BUTTON */}
-        <button className="navbar-toggler" onClick={menu}>
+          {/* BUTTON MOBILE */}
+          <button 
+            className="navbar-toggler text-black border-0 fs-2"
+            onClick={openMenu}
+          >
+            ☰
+          </button>
 
-          {open ? "X" : "☰"}
-
-        </button>
-
-        {/* MENU */}
-        <div className={`collapse navbar-collapse ${open ? "show" : ""}`}>
-
-          <ul className="navbar-nav ms-auto "   >
-
-            <li className="nav-item" >
-              <a className="nav-link text-white"  >Accueil</a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link text-white" >Présentation</a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link text-white" >Formations</a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link text-white" >Actualités</a>
-            </li>
+          {/* MENU NORMAL */}
+          <div className="collapse navbar-collapse d-none d-lg-block">
+            <ul className="navbar-nav ms-auto">
 
              <li className="nav-item">
-              <a className="nav-link text-white" >Contact</a>
-            </li>
+                <Link to="/" className="nav-link text-black">Accueil</Link>
+              </li>
 
-          </ul>
+              <li className="nav-item">
+                <Link to="/formations" className="nav-link text-black">Formations</Link>
+              </li>
+
+              <li className="nav-item">
+                <Link to="/actualites" className="nav-link text-black">Actualités</Link>
+              </li>
+
+              <li className="nav-item">
+                <Link to="/contact" className="nav-link text-black">Contact</Link>
+              </li>
+
+
+            </ul>
+          </div>
 
         </div>
+      </nav>
+
+      {/* SIDE MENU MOBILE */}
+      <div className={`side-menu ${open ? "active" : ""}`}>
+
+        <div className="text-end p-3">
+          <button 
+            className="border-0 bg-transparent text-white fs-2"
+            onClick={closeMenu}
+          >
+            ✕
+          </button>
+        </div>
+
+        <ul className="list-unstyled p-4">
+
+         <li className="mb-3">
+          <Link to="/" className="menu-link">Accueil</Link>
+        </li>
+
+        <li className="mb-3">
+          <Link to="/presentation" className="menu-link">Présentation</Link>
+        </li>
+
+        <li className="mb-3">
+          <Link to="/formations" className="menu-link">Formations</Link>
+        </li>
+
+        <li className="mb-3">
+          <Link to="/actualites" className="menu-link">Actualités</Link>
+        </li>
+
+        <li className="mb-3">
+          <Link to="/contact" className="menu-link">Contact</Link>
+        </li>
+
+        </ul>
 
       </div>
-    </nav>
+    </>
   );
 };
 

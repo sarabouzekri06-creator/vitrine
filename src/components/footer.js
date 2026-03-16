@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className=" text-light pt-4 pb-2" style={{background:"#053F5C"}}>
@@ -19,11 +21,18 @@ const Footer = () => {
           <div className="col-md-4 mb-3">
             <h5>Liens</h5>
             <ul className="list-unstyled">
-              <li><a className="nav-link text-white">Accueil</a></li>
-              <li><a className="nav-link text-white">Formations</a></li>
-              <li><a className="nav-link text-white">Actualités</a></li>
-              <li><a className="nav-link text-white">Contact</a></li>
-              
+             <li>
+              <Link to="/" className="nav-link text-white">Accueil</Link>
+            </li>
+            <li>
+              <Link to="/formations" className="nav-link text-white">Formations</Link>
+            </li>
+            <li>
+              <Link to="/actualites" className="nav-link text-white">Actualités</Link>
+            </li>
+            <li>
+              <Link to="/contact" className="nav-link text-white">Contact</Link>
+            </li>
             </ul>
           </div>
 
@@ -36,15 +45,15 @@ const Footer = () => {
 
 
            <div className="d-flex gap-3">
-              <a href="https://facebook.com" target="_blank">
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" >
                 <i className="bi bi-facebook fs-4"></i>
               </a>
 
-              <a href="https://twitter.com" target="_blank">
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" >
                 <i className="bi bi-twitter fs-4"></i>
               </a>
 
-              <a href="https://linkedin.com" target="_blank">
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" >
                 <i className="bi bi-linkedin fs-4"></i>
               </a>
             </div>
