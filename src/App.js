@@ -1,41 +1,37 @@
+import React from 'react';
 import { Toaster } from 'sonner';
+
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Presentation from './pages/Presentation';
+import Footer from './components/Footer';
+
 import ContactPage from "./page/ContactPage";
 
 function App() {
   return (
     <div>
+      {/* Notifications */}
       <Toaster position="top-right" richColors />
-         <ContactPage />
+      
+      {/* Navbar  */}
+      <Navbar />
+
+      <main>
+        {/* Section Hero */}
+        <Hero />
+
+        {/* Section About / Presentation */}
+        <Presentation />
+
+        {/*  Contact  */}
+        <ContactPage />
+      </main>
+
+      {/* Footer  */}
+      <Footer />
     </div>
   );
 }
 
-// import ContactPage from "./page/ContactPage";
-
-      // {/* Hero Section */}
-      // <Hero />
-      
-      // {/* Contact page */}
-      // <ContactPage />
-
-      // {/* About / Presentation */}
-      // <Presentation />
-
-      // {/* Footer */}
-//       <Footer />
-//     </div>
-//   );
-// }
-
-// export default App;
-// */
-import ContactPage from "./page/ContactPage";
-const App = () => {
-  return ( 
-    <div>
-      <ContactPage />
-    </div>
-   );
-}
- 
 export default App;
