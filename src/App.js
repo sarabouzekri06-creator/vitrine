@@ -6,7 +6,7 @@ import Hero from './components/Hero';
 import Presentation from './pages/Presentation';
 import Footer from './components/Footer';
 
-import ContactPage from "./page/ContactPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
