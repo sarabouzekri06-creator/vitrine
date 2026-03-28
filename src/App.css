@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -35,4 +36,44 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+.hero-section {
+  
+  /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), 
+              url('c:\Users\pc\Downloads\WhatsApp Image 2026-03-13 at 22.36.20.jpeg'); */
+  
+  background-size: cover;
+  background-position: center;
+  height: 100vh; 
+  width: 100%;
+}
+
+.hero-section h1 {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: -1px;
+}
+
+.hero-btn {
+  background-color: #4A6741 !important; 
+  border: none !important;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px); 
+  background-color: #3d5535 !important;
+}
+
+
+.animate-fade-in {
+  animation: fadeIn 1.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
 }
